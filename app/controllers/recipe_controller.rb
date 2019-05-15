@@ -31,7 +31,7 @@ class RecipeController < ApplicationController
     redirect "/recipes/#{recipe.id}"
   end
   # 7 - DESTROY
-  delete "/recipes/:id/delete" do
+  delete "/recipes/:id" do
     recipe = Recipe.find(params[:id])
     recipe.destroy
     redirect "/recipes"

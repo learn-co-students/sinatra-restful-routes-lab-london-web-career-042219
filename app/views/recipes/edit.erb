@@ -4,21 +4,17 @@
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div>
     <label for=""> Name: </label>
-    <input type="text" name="recipe[name]" value="<%= @recipe.name %>"></input>
+    <input id="name" type="text" name="recipe[name]" value="<%= @recipe.name %>"></input>
   </div>
   <div>
     <label for ""> Ingredients </label>
-    <input type="text" name="recipe[ingredients]" value="<%= @recipe.ingredients %>"
+    <input id="ingredients" type="text" name="recipe[ingredients]" value="<%= @recipe.ingredients %>"
   </div>
   <div>
     <label for ""> Cook Time </label>
-    <input type="text" name="recipe[cook_time]" value="<%= @recipe.cook_time %>"
+    <input id="cook_time" type="text" name="recipe[cook_time]" value="<%= @recipe.cook_time %>"
   </div>
   <input type="submit" value="Edit Recipe"></input>
   </form>
   <br>
-  <form action="/recipes/<%=@recipe.id%>/delete" method="post">
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete Recipe"></input>
-    </form>
   <h3><a href="/">Main Menu</a></h3>
