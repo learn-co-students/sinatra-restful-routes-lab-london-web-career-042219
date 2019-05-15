@@ -62,7 +62,7 @@ describe "Recipe App" do
     end
 
     it 'deletes via a DELETE request' do
-      expect(page.find(:css, "form input[name=_method]", :visible => false)[:value]).to match(/delete/i)
+     expect(page.find(:css, "form input[name=_method]", :visible => false)[:value]).to match(/delete/i)
     end
   end
 

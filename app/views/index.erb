@@ -1,0 +1,19 @@
+<h1>List all recipes</h1>
+<h2><a href="/recipes/new">Create new Recipe</a>
+<table cellpadding=5>
+
+  <tr><td>Name</td><td>Ingredients</td><td>Cook time</td><td>Action</td>
+  <% @recipes.each do |r| %>
+  <tr>
+  <td><%= r.name %></td>
+
+  <td><%=r.ingredients%></td>
+
+  <td><%=r.cook_time%></td>
+
+   <td><a href="/recipes/<%= r.id %>">Update</a></td>
+  </tr>
+
+<% end%>
+</table>
+<h2><a href="/recipes/new">Create new Recipe</a>

@@ -1,0 +1,21 @@
+<h1>Update <%=@recipe.name%> recipe</h1>
+
+<a href="/">Go back</a>
+
+<form action="/recipes/<%= @recipe.id %>" method="post">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<div>
+    <label for="">Name:</label>
+    <input type="text" name="recipe[name]" id="name" value="<%=@recipe.name%>"/>
+</div>
+<div>
+    <label for="">Ingredients:</label>
+    <input type="text" name="recipe[ingredients]" id="ingredients" value="<%=@recipe.ingredients%>"/>
+</div>
+<div>
+    <label for="">Cook time:</label>
+    <input type="text" name="recipe[cook_time]" id="cook_time" value="<%=@recipe.cook_time%>"/>
+</div>
+
+<input type="submit" id="submit" value="Update this Recipe" />
+</form>
