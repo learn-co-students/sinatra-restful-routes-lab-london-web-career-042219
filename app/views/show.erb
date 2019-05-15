@@ -1,0 +1,14 @@
+<h1> <%= @recipe.name %> </h1>
+
+<p> To make <%= @recipe.name %> you will need the following ingredients:</p>
+<p> <%= @recipe.ingredients %></p>
+<p> And will take <%= @recipe.cook_time %> minutes to be ready.</p>
+
+<a href="/recipes/<%= @recipe.id %>/edit">Edit this recipe</a>
+<br></br>
+<a href="/recipes">Go back to see all recipes</a>
+
+<form action="/recipes/<%= @recipe.id %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input id="mysubmit" type="submit" value="delete">
+</form>
