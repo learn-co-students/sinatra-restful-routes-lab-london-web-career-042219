@@ -1,0 +1,14 @@
+<h1>Recipe: <%= @recipe.name %></h1>
+<h3>Ingredients: <%= @recipe.ingredients %></h3>
+<h3>Cook Time: <%= @recipe.cook_time %></h3>
+
+<p>
+    To edit <%= @recipe.name %> click 
+    <a href="/recipes/<%= @recipe.id %>/edit">
+    here.
+    </a>
+
+</p>
+
+<a href="/recipes">Go back to see all the recipes</a>
+
